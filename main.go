@@ -6,9 +6,8 @@ import (
 )
 
 func main() {
-
 	// opening the file in read-only mode. The file must exist (in the current working directory)
-	file, _ := os.Open("chars.txt")
+	file, _ := os.Open("standard.txt")
 
 	// the file value returned by os.Open() is wrapped in a bufio.Scanner just like a buffered reader.
 	scanned := bufio.NewScanner(file)
@@ -22,4 +21,16 @@ func main() {
 	}
 
 	file.Close()
+
+	asciiChrs := make(map[int][]string)
+
+	dec := 31
+
+	for _, line := range lines {
+		if line == "" {
+			dec++
+		} else {
+			asciiChrs[dec] = append(asciiChrs[dec], line)
+		}
+	}
 }
