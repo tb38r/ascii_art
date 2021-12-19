@@ -1,6 +1,6 @@
 # Aasci Art
 
-Built a program which receieved a string as an argument and outputting the string in a graphic representation using ASCII. 
+Built a program which receieves a string as an argument and outputting the string in a graphic representation using ASCII. 
 
 </br>
 
